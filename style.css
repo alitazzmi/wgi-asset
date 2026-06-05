@@ -191,3 +191,8 @@ p { font-size: 17px; max-width: 800px; color: #555; margin-bottom: 20px; }
     background-color: #111; color: #fff; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;
 }
 .contact-form button:hover { background-color: #333; }
+/* FORMULIR LITE */
+.contact-section { padding: 40px 8%; background: #fff; }
+.contact-form { max-width: 600px; margin: 20px auto; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; }
+.contact-form button { width: 100%; padding: 12px; background: #111; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
