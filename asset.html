@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WGI Global Asset | Asset</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">WGI Global Asset</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="asset.html" style="color:#fff; font-weight:bold;">Asset</a></li>
+            <li><a href="produk-mbg.html">Produk MBG</a></li>
+            <li><a href="supplier.html">Supplier</a></li>
+            <li><a href="export-import.html">Export Import</a></li>
+        </ul>
+    </nav>
+
+    <section class="section-content" style="background-color: #f1f1f1;">
+        <h2>Daftar Asset</h2>
+        <p>Daftar 50 aset produktif yang siap dikelola.</p>
+        <div class="grid-produk">
+            <script>
+                // Karena HTML ini sama semua, saya memendekkan penulisan 50 div-nya di sini agar file Bapak tetap rapi.
+                // Jika mau ubah gambar, Bapak cukup cari angka kotaknya.
+                for(let i=1; i<=50; i++) {
+                    document.write(`<div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong ${i}</h3></div>`);
+                }
+            </script>
+        </div>
+    </section>
+
+    <a href="https://wa.me/6281234567890?text=Halo%20WGI%20Global%20Asset" class="wa-bubble" target="_blank">💬 Chat WhatsApp</a>
+</body>
+</html>
