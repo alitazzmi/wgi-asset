@@ -1,15 +1,15 @@
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 body { background-color: #f9f9f9; color: #333; line-height: 1.6; }
 
-/* NAVIGASI UMUM */
+/* NAVIGASI UMUM (DESKTOP) */
 .navbar { background-color: #111; padding: 15px 5%; position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; }
-.logo { color: #fff; font-size: 20px; font-weight: bold; letter-spacing: 1px; }
+.logo { color: #fff; font-size: 20px; font-weight: bold; letter-spacing: 1px; text-align: center;}
 .nav-links { list-style: none; display: flex; }
 .nav-links li { margin-left: 20px; }
 .nav-links a { color: #ccc; text-decoration: none; font-size: 15px; transition: 0.3s; }
 .nav-links a:hover { color: #fff; }
 
-/* KONTEN */
+/* KONTEN UTAMA */
 .section-content { padding: 100px 8% 60px 8%; min-height: 80vh; background-color: #ffffff;}
 #home { text-align: center; display: flex; flex-direction: column; justify-content: center;}
 h1 { font-size: 42px; margin-bottom: 20px; color: #111; }
@@ -32,3 +32,62 @@ p { font-size: 17px; max-width: 800px; color: #555; margin-bottom: 20px; }
 /* WHATSAPP BUBBLE */
 .wa-bubble { position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: white; border-radius: 50px; padding: 12px 25px; font-size: 16px; font-weight: bold; text-decoration: none; box-shadow: 2px 4px 10px rgba(0,0,0,0.2); z-index: 1000; transition: 0.3s; }
 .wa-bubble:hover { background-color: #1ebe57; transform: scale(1.05); }
+
+/* ======================================================= */
+/* KODE SPESIAL UNTUK HP (RESPONSIVE MOBILE FRIENDLY)      */
+/* ======================================================= */
+@media (max-width: 768px) {
+    /* 1. Merapikan Navigasi jadi susun bawah & bentuk tombol */
+    .navbar {
+        flex-direction: column;
+        padding: 15px 5%;
+    }
+    .logo {
+        margin-bottom: 12px;
+        font-size: 22px;
+    }
+    .nav-links {
+        flex-wrap: wrap; /* Fitur ini agar menu yang kepanjangan otomatis turun ke baris baru */
+        justify-content: center;
+        gap: 8px; /* Jarak antar tombol menu */
+    }
+    .nav-links li {
+        margin-left: 0; /* Menghapus jarak versi desktop */
+    }
+    .nav-links a {
+        background-color: #222; /* Membuat menu seperti tombol kapsul */
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 13px;
+        display: inline-block;
+        border: 1px solid #444;
+    }
+    .nav-links a:hover {
+        background-color: #444;
+    }
+    
+    /* 2. Menyesuaikan ruang agar konten tidak tertutup menu HP yang membesar */
+    .section-content {
+        padding-top: 180px; 
+    }
+    h1 { font-size: 30px; }
+    h2 { font-size: 22px; }
+    p { font-size: 15px; }
+
+    /* 3. Menyesuaikan Kotak Produk & Judul Dropdown di Layar HP */
+    .kategori-klik summary { font-size: 15px; padding: 12px 15px; }
+    .grid-produk {
+        /* Di HP, kotak akan otomatis mengecil dan jadi 2 bersebelahan jika muat */
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 12px;
+    }
+    .kotak-produk { padding: 10px; }
+    .foto-produk { height: 110px; margin-bottom: 10px;}
+    .nama-produk { font-size: 13px; margin-bottom: 5px; }
+
+    /* 4. Menyesuaikan Tombol WA agar tidak kebesaran di HP */
+    .wa-bubble {
+        bottom: 20px; right: 20px;
+        padding: 10px 18px; font-size: 14px;
+    }
+}
