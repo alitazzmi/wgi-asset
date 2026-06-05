@@ -181,3 +181,13 @@ p { font-size: 17px; max-width: 800px; color: #555; margin-bottom: 20px; }
 .visi-misi-box li {
     margin-bottom: 8px;
 }
+/* DESAIN FORM KONTAK */
+.contact-form { max-width: 600px; margin-top: 20px; }
+.contact-form label { display: block; margin-bottom: 5px; font-weight: bold; }
+.contact-form input, .contact-form textarea {
+    width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;
+}
+.contact-form button {
+    background-color: #111; color: #fff; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;
+}
+.contact-form button:hover { background-color: #333; }
