@@ -3,76 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WGI Global Asset | Official Website</title>
-    <style>
-        /* DESAIN BASE & WARNA */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #f9f9f9; color: #333; line-height: 1.6; }
-
-        /* MENU NAVIGASI */
-        .navbar {
-            background-color: #111; padding: 15px 5%; position: fixed;
-            width: 100%; top: 0; left: 0; z-index: 1000;
-            display: flex; justify-content: space-between; align-items: center;
-        }
-        .logo { color: #fff; font-size: 20px; font-weight: bold; letter-spacing: 1px; }
-        .nav-links { list-style: none; display: flex; }
-        .nav-links li { margin-left: 20px; }
-        .nav-links a { color: #ccc; text-decoration: none; font-size: 15px; transition: 0.3s; }
-        .nav-links a:hover { color: #fff; }
-
-        /* KONTEN HALAMAN */
-        .section-content { padding: 100px 8% 60px 8%; min-height: 80vh; }
-        #home { background-color: #ffffff; text-align: center; display: flex; flex-direction: column; justify-content: center;}
-        #asset { background-color: #f1f1f1; }
-        #produk-mbg { background-color: #ffffff; }
-        #supplier { background-color: #f1f1f1; }
-        #export-import { background-color: #ffffff; }
-
-        h1 { font-size: 42px; margin-bottom: 20px; color: #111; }
-        h2 { font-size: 28px; margin-bottom: 15px; color: #222; border-bottom: 2px solid #333; padding-bottom: 10px; display: inline-block; }
-        p { font-size: 17px; max-width: 800px; color: #555; margin-bottom: 20px; }
-
-        /* KOTAK PRODUK UMUM */
-        .grid-produk { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; margin-top: 20px; }
-        .kotak-produk {
-            background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 15px; text-align: center; 
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s;
-        }
-        .kotak-produk:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
-        
-        /* DESAIN GAMBAR PRODUK */
-        .foto-produk {
-            width: 100%; height: 160px; object-fit: cover; border-radius: 4px;
-            margin-bottom: 15px; background: #eaeaea; border: 1px solid #ccc; display: block;
-        }
-        .nama-produk { font-size: 16px; color: #111; margin-bottom: 10px; }
-
-        /* KOTAK KATEGORI BISA DI KLIK (DROPDOWN) */
-        .kategori-klik { background: #fff; border: 1px solid #ccc; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .kategori-klik summary { font-size: 18px; font-weight: bold; padding: 15px 20px; background: #e0e0e0; cursor: pointer; list-style: none; border-radius: 8px; }
-        .kategori-klik summary:hover { background: #d5d5d5; }
-        .kategori-klik .grid-produk { padding: 20px; background: #fafafa; border-top: 1px solid #ccc; border-radius: 0 0 8px 8px; margin-top: 0;}
-
-        /* WHATSAPP BUBBLE */
-        .wa-bubble {
-            position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: white;
-            border-radius: 50px; padding: 12px 25px; font-size: 16px; font-weight: bold; text-decoration: none;
-            box-shadow: 2px 4px 10px rgba(0,0,0,0.2); z-index: 1000; transition: 0.3s;
-        }
-        .wa-bubble:hover { background-color: #1ebe57; transform: scale(1.05); }
-    </style>
+    <title>WGI Global Asset | Home</title>
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
     <nav class="navbar">
         <div class="logo">WGI Global Asset</div>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#asset">Asset</a></li>
-            <li><a href="#produk-mbg">Produk MBG</a></li>
-            <li><a href="#supplier">Supplier</a></li>
-            <li><a href="#export-import">Export Import</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="asset.html">Asset</a></li>
+            <li><a href="produk-mbg.html">Produk MBG</a></li>
+            <li><a href="supplier.html">Supplier</a></li>
+            <li><a href="export-import.html">Export Import</a></li>
         </ul>
     </nav>
 
@@ -81,188 +24,7 @@
         <p style="margin: 0 auto;">Selamat datang di WGI Global Asset. Kami berfokus pada penyediaan komoditas unggulan, pengelolaan aset produktif, dan jaringan pasokan global.</p>
     </section>
 
-    <section id="asset" class="section-content">
-        <h2>Asset</h2>
-        <p>Daftar 50 aset produktif yang siap dikelola.</p>
-        <div class="grid-produk">
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 1</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 2</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 3</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 4</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 5</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 6</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 7</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 8</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 9</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 10</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 11</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 12</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 13</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 14</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 15</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 16</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 17</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 18</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 19</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 20</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 21</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 22</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 23</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 24</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 25</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 26</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 27</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 28</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 29</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 30</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 31</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 32</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 33</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 34</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 35</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 36</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 37</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 38</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 39</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 40</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 41</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 42</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 43</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 44</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 45</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 46</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 47</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 48</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 49</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Produk Kosong 50</h3></div>
-        </div>
-    </section>
-
-    <section id="produk-mbg" class="section-content">
-        <h2>Produk MBG</h2>
-        <div class="grid-produk">
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Jasa Pembangunan MBG</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Jasa Instalasi IPAL</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Jasa Perizinan MBG dan Dokument</h3></div>
-            <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Jasa Alat Masak MBG</h3></div>
-        </div>
-    </section>
-
-    <section id="supplier" class="section-content">
-        <h2>Supplier</h2>
-        
-        <details class="kategori-klik">
-            <summary>📦 Jasa Supplier Sekali Kirim</summary>
-            <div class="grid-produk">
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 1</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 2</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 3</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 4</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 5</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 6</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 7</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 8</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 9</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 10</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 11</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 12</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 13</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 14</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 15</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 16</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 17</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 18</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 19</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 20</h3></div>
-            </div>
-        </details>
-
-        <details class="kategori-klik">
-            <summary>📦 Jasa Supplier Rutin Mingguan dan Bulanan</summary>
-            <div class="grid-produk">
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 1</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 2</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 3</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 4</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 5</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 6</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 7</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 8</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 9</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 10</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 11</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 12</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 13</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 14</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 15</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 16</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 17</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 18</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 19</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Supply Barang Combo 20</h3></div>
-            </div>
-        </details>
-    </section>
-
-    <section id="export-import" class="section-content">
-        <h2>Export Import</h2>
-        
-        <details class="kategori-klik">
-            <summary>🚢 Kategori Export</summary>
-            <div class="grid-produk">
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Export 1</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Export 2</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Export 3</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Export 4</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Export 5</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Export 6</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Export 7</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Export 8</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Export 9</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Export 10</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Export 11</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Export 12</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Export 13</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Export 14</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Export 15</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Export 16</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Export 17</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Export 18</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Export 19</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Export 20</h3></div>
-            </div>
-        </details>
-
-        <details class="kategori-klik">
-            <summary>🛬 Kategori Import</summary>
-            <div class="grid-produk">
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Import 1</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Import 2</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Import 3</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Import 4</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Import 5</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Import 6</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Import 7</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Import 8</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Import 9</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Import 10</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Import 11</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Import 12</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Import 13</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Import 14</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Import 15</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Import 16</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Import 17</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Import 18</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Import 19</h3></div>
-                <div class="kotak-produk"><img src="https://via.placeholder.com/300x200?text=FOTO+KOSONG" class="foto-produk"><h3 class="nama-produk">Import 20</h3></div>
-            </div>
-        </details>
-    </section>
-
-    <a href="https://wa.me/6281234567890?text=Halo%20WGI%20Global%20Asset" class="wa-bubble" target="_blank">
-        💬 Chat WhatsApp
-    </a>
+    <a href="https://wa.me/6281234567890?text=Halo%20WGI%20Global%20Asset" class="wa-bubble" target="_blank">💬 Chat WhatsApp</a>
 
 </body>
 </html>
