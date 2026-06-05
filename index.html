@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WGI Global Asset | Official Website</title>
+    <style>
+        /* DESAIN BASE & WARNA */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* MENU NAVIGASI */
+        .navbar {
+            background-color: #111;
+            padding: 15px 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin-left: 20px;
+        }
+        .nav-links a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        /* KONTEN HALAMAN */
+        .section-content {
+            padding: 100px 8% 60px 8%;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        /* WARNA BERBEDA TIAP SECTION SUPAYA JELAS BARU/TIDAKNYA */
+        #home { background-color: #ffffff; text-align: center; }
+        #asset { background-color: #f1f1f1; }
+        #produk-mbg { background-color: #ffffff; }
+        #supplier { background-color: #f1f1f1; }
+        #export-import { background-color: #ffffff; }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #111;
+        }
+        h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #222;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        p {
+            font-size: 17px;
+            max-width: 800px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MENU NAVIGASI -->
+    <nav class="navbar">
+        <div class="logo">WGI Global Asset</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#asset">Asset</a></li>
+            <li><a href="#produk-mbg">Produk MBG</a></li>
+            <li><a href="#supplier">Supplier</a></li>
+            <li><a href="#export-import">Export Import</a></li>
+        </ul>
+    </nav>
+
+    <!-- KONTEN: HOME / TENTANG KAMI -->
+    <section id="home" class="section-content">
+        <h1>WGI Global Asset</h1>
+        <p style="margin: 0 auto;">Selamat datang di WGI Global Asset. Kami berfokus pada penyediaan komoditas unggulan, pengelolaan aset produktif, dan jaringan pasokan global. Kami menghubungkan produsen lokal dengan pasar internasional melalui sistem tata kelola yang terpercaya.</p>
+    </section>
+
+    <!-- KONTEN: ASSET -->
+    <section id="asset" class="section-content">
+        <h2>Asset</h2>
+        <p>Halaman ini akan menampilkan daftar aset produktif yang kami kelola untuk menjaga stabilitas bisnis jangka panjang.</p>
+    </section>
+
+    <!-- KONTEN: PRODUK MBG -->
+    <section id="produk-mbg" class="section-content">
+        <h2>Produk MBG</h2>
+        <p>Katalog variasi produk unggulan dalam ekosistem bisnis MBG akan dimuat di bagian ini lengkap dengan spesifikasinya.</p>
+    </section>
+
+    <!-- KONTEN: SUPPLIER -->
+    <section id="supplier" class="section-content">
+        <h2>Supplier</h2>
+        <p>Jaringan mitra penyuplai terpercaya yang menjamin ketersediaan pasokan bahan baku berkualitas tinggi.</p>
+    </section>
+
+    <!-- KONTEN: EXPORT IMPORT -->
+    <section id="export-import" class="section-content">
+        <h2>Export Import</h2>
+        <p>Layanan perdagangan internasional, logistik lintas negara, dan pemenuhan dokumen standar global.</p>
+    </section>
+
+</body>
+</html>
