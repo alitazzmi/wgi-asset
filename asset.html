@@ -23,7 +23,7 @@
         <h2>Daftar Asset</h2>
         <p>Katalog aset produktif yang siap dikelola.</p>
         <div class="grid-produk" id="data-katalog">
-            <p style="text-align: center; width: 100%;">Sedang memuat data produk...</p>
+            <p style="text-align: center; width: 100%;">Sedang memuat data dari server...</p>
         </div>
     </section>
 
@@ -39,7 +39,7 @@
         </form>
     </section>
 
-    <!-- FOOTER PERUSAHAAN -->
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-col">
@@ -64,7 +64,6 @@
 
     <a href="https://wa.me/6281234567890?text=Halo%20WGI%20Global%20Asset" class="wa-bubble" target="_blank">💬 Chat WhatsApp</a>
 
-<!-- SCRIPT PENYEDOT DATA GOOGLE SHEETS (SISTEM ANTI-LEWAT) -->
     <script>
         const SPREADSHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRQkggVzG0DXtRPwOLjIa9sOFyfan7lYo2UpWvuDsKkn403Y2kVTRxrnTZb78XVrm11cPhjpcxDskaR/pubhtml';
 
@@ -77,20 +76,16 @@
                 const rows = doc.querySelectorAll('table tr');
                 let htmlContent = '';
                 
-                // Mulai dari 0 agar tidak ada satu baris pun yang terlewat
-                for (let i = 0; i < rows.length; i++) {
+                // Mulai dari baris 1 (lewati header)
+                for (let i = 1; i < rows.length; i++) {
                     const cols = rows[i].querySelectorAll('td');
-                    
                     if (cols.length >= 5) {
                         const nama = cols[1].innerText.trim();
                         const harga = cols[2].innerText.trim();
                         const kategori = cols[3].innerText.trim().toLowerCase();
                         const linkFoto = cols[4].innerText.trim();
                         
-                        // Mesin otomatis melewati baris judul (Header) dan baris kosong
-                        if (nama === 'Nama Produk' || nama === '') continue;
-
-                        // FILTER KATEGORI: Pastikan ini sesuai dengan nama halaman
+                        // Cek jika kategori adalah 'asset' dan bukan baris header
                         if (kategori === 'asset') {
                             htmlContent += `
                                 <div class="kotak-produk">
@@ -102,10 +97,9 @@
                         }
                     }
                 }
-                
-                document.getElementById('data-katalog').innerHTML = htmlContent || '<p style="text-align:center; width:100%;">Belum ada produk yang diupload di kategori ini.</p>';
+                document.getElementById('data-katalog').innerHTML = htmlContent || '<p style="text-align:center; width:100%;">Belum ada produk yang diupload di kategori Asset.</p>';
             } catch (error) {
-                document.getElementById('data-katalog').innerHTML = '<p style="text-align:center; width:100%;">Gagal memuat data. Sedang sinkronisasi dengan server Google.</p>';
+                document.getElementById('data-katalog').innerHTML = '<p style="text-align:center; width:100%;">Gagal memuat data. Mohon refresh ulang.</p>';
             }
         }
         fetchKatalog();
