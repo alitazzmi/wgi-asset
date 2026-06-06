@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <nav class="navbar">
         <div class="logo">WGI Global Asset</div>
         <ul class="nav-links">
@@ -15,7 +16,6 @@
             <li><a href="produk-mbg.html">Produk MBG</a></li>
             <li><a href="supplier.html">Supplier</a></li>
             <li><a href="export-import.html">Export Import</a></li>
-            <li><a href="#kontak">Kontak</a></li>
         </ul>
     </nav>
 
@@ -27,8 +27,8 @@
         </div>
     </section>
 
-    <!-- FORMULIR KONTAK LITE -->
-    <section id="kontak" class="contact-section" style="background: #fff; padding: 40px 8%;">
+    <!-- FORMULIR KONTAK -->
+    <section class="contact-section" style="background: #fff; padding: 40px 8%;">
         <h2 style="text-align: center;">Kirim Pesan ke Kami</h2>
         <form action="https://formsubmit.co/alithidayatulazmi@gmail.com" method="POST" class="contact-form">
             <input type="hidden" name="_captcha" value="false">
@@ -64,7 +64,6 @@
 
     <a href="https://wa.me/6281234567890?text=Halo%20WGI%20Global%20Asset" class="wa-bubble" target="_blank">💬 Chat WhatsApp</a>
 
-    <!-- SCRIPT PENYEDOT DATA GOOGLE SHEETS -->
     <script>
         const SPREADSHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRQkggVzG0DXtRPwOLjIa9sOFyfan7lYo2UpWvuDsKkn403Y2kVTRxrnTZb78XVrm11cPhjpcxDskaR/pubhtml';
 
@@ -77,20 +76,20 @@
                 const rows = doc.querySelectorAll('table tr');
                 let htmlContent = '';
                 
-                // Mulai dari baris ke-2 karena baris 0 dan 1 biasanya adalah judul kolom dari Google
                 for (let i = 2; i < rows.length; i++) {
                     const cols = rows[i].querySelectorAll('td');
-                    if (cols.length >= 4) {
+                    if (cols.length >= 5) {
                         const nama = cols[1].innerText;
-                        const kategori = cols[2].innerText;
-                        const linkFoto = cols[3].innerText;
+                        const harga = cols[2].innerText;
+                        const kategori = cols[3].innerText;
+                        const linkFoto = cols[4].innerText;
                         
-                        // FILTER KHUSUS HALAMAN ASSET
                         if (kategori.trim().toLowerCase() === 'asset') {
                             htmlContent += `
                                 <div class="kotak-produk">
                                     <img src="${linkFoto}" class="foto-produk" onerror="this.src='https://via.placeholder.com/300x200?text=FOTO+KOSONG'">
                                     <h3 class="nama-produk">${nama}</h3>
+                                    <div style="font-size: 18px; font-weight: bold; color: #27ae60; margin-bottom: 10px;">${harga}</div>
                                 </div>
                             `;
                         }
@@ -98,7 +97,7 @@
                 }
                 document.getElementById('data-katalog').innerHTML = htmlContent || '<p style="text-align:center; width:100%;">Belum ada produk yang diupload.</p>';
             } catch (error) {
-                document.getElementById('data-katalog').innerHTML = '<p style="text-align:center; width:100%;">Gagal memuat data. Pastikan link Google Sheet benar.</p>';
+                document.getElementById('data-katalog').innerHTML = '<p style="text-align:center; width:100%;">Gagal memuat data.</p>';
             }
         }
         fetchKatalog();
